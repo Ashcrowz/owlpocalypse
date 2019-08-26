@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+	<title>Examples of Horses I Like</title>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div id="page-wrap">
+	<div class="hero">
+		<div class="hero-text">
+			<h1>HORSES I LIKE</h1>
+			<h3>FOR REFERENCE</h3>
+		</div>
+	</div>
+<br>
+<ul>
+	<li><a href="./index3.html">Home</a></li>
+	<li><a class="active" #home">Horse Examples</a></li>
+	<li><a href="./contact.html">Contact</a></li>
+	<li><a href="./alternates.html">Alternate Solutions</a></li>
+</ul>
+<br>
+
+<main>
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+	<div class="mySlides">
+		<div class="numbertext">1 / 6</div>
+		<img src="https://i.pinimg.com/736x/f0/58/5b/f0585bb6585f9b31b11ace6e6b6cd287--andalusian-horse-lusitano.jpg" style="width:550px; height:450px"/>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">2 / 6</div>		
+		<img src="https://famedubai.com/wp-content/uploads/2017/07/parties-stallions-dubai-arabian-horse-stud.jpg" alt="Arabian Horse" style="width:550px; height:450px"/>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">3 / 6</div>
+		<img src="https://i.pinimg.com/originals/b4/6c/b1/b46cb1f2a8739441a098efa377d975cf.jpg" style="width:550px; height:450px"/>
+	</div>		
+	<div class="mySlides">
+		<div class="numbertext">4 / 6</div>
+		<img src="https://imgc.allpostersimages.com/img/print/u-g-Q10NYGJ0.jpg?w=550&h=550&p=0" style="width:550px; height:450px"/>
+	</div>
+						
+	<div class="mySlides">
+		<div class="numbertext">5 / 6</div>
+		<img src="http://www.sandyridge.ab.ca/images/stallions/A_Classic_Guy/2014/A-Classic-Guy2014.jpg" style="width:550px; height:450px"/>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">6 / 6</div>
+		<img src="https://i.pinimg.com/originals/aa/f8/24/aaf8247ee8dd0ca7485ca0ceb29b1101.jpg" style="width:550px; height:450px"/>
+	</div>
+
+		
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+
+	<div class="caption-conainer">
+		<span id="caption"></span>
+	<div>
+
+	<div class="row">
+		<div class="column">
+			<img class="demo cursor" src="https://i.pinimg.com/736x/f0/58/5b/f0585bb6585f9b31b11ace6e6b6cd287--andalusian-horse-lusitano.jpg" style="width:100%" onclick="currentSlide(1)" alt="Andalusian">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="https://famedubai.com/wp-content/uploads/2017/07/parties-stallions-dubai-arabian-horse-stud.jpg" style="width:100%" onclick="currentSlide(2)" alt="Arabian">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="https://i.pinimg.com/originals/b4/6c/b1/b46cb1f2a8739441a098efa377d975cf.jpg" style="width:100%" onclick="currentSlide(3)" alt="Clydesdale">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="https://imgc.allpostersimages.com/img/print/u-g-Q10NYGJ0.jpg?w=550&h=550&p=0" style="width:100%" onclick="currentSlide(4)" alt="Appaloosa">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="http://www.sandyridge.ab.ca/images/stallions/A_Classic_Guy/2014/A-Classic-Guy2014.jpg" style="width:100%" onclick="currentSlide(5)" alt="American Quarter Horse">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="https://i.pinimg.com/originals/aa/f8/24/aaf8247ee8dd0ca7485ca0ceb29b1101.jpg" style="width:100%" onclick="currentSlide(6)" alt="Akhal Teke">
+		</div>
+	</div>
+</div>
+
+<script>			
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+} 
+</script>
+
+
+</main>
+
+	<footer>
+		Thank you for taking the time to apologize for my lack of horse. Please come again.
+	</footer>
+</div>
+</body>	
+</html>
